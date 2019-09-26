@@ -1,36 +1,29 @@
 /*------------------------------------*\
 #FONTS
 \*------------------------------------*/
-
 /*------------------------------------*\
 #Variables
 \*------------------------------------*/
-
-:root {
-
-}
+:root {}
 
 /* CSS variables here */
-
 /*------------------------------------*\
 #GENERIC
 \*------------------------------------*/
-
 /*
     Generic: Page
     ---
     Global page styles + universal box-sizing:
 */
-
 html {
     font-size: 16px;
     line-height: 1.5;
     font-family: Helvetica, arial, sans-serif;
-    color: grey;
+    color: #20223a;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: white;
+    background-color: #F5F6FA;
 }
 
 *,
@@ -45,15 +38,14 @@ html {
 *
 * Customize the background color to match your design.
 */
-
 ::-moz-selection {
-    background: HotPink;
+    background: #3385FF;
     color: white;
     text-shadow: none;
 }
 
 ::selection {
-    background: HotPink;
+    background: #3385FF;
     color: white;
     text-shadow: none;
 }
@@ -61,13 +53,11 @@ html {
 /*------------------------------------*\
 #Elements
 \*------------------------------------*/
-
 /*
 Elements: Images
 ---
 Default markup for images to make them responsive
 */
-
 img {
     max-width: 100%;
     vertical-align: top;
@@ -78,7 +68,6 @@ img {
     ---
     Default markup for typographic elements
 */
-
 h1,
 h2,
 h3 {
@@ -175,13 +164,11 @@ a:focus {
 /*------------------------------------*\
 #OBJECTS
 \*------------------------------------*/
-
 /*
     Objects: Row
     ---
     Creates a horizontal row that stretches the viewport and adds padding around children
 */
-
 .o-row {
     position: relative;
     padding: 24px 24px 0;
@@ -192,7 +179,6 @@ a:focus {
 }
 
 /* size modifiers */
-
 .o-row--lg {
     padding-top: 48px;
     padding-bottom: 24px;
@@ -222,11 +208,11 @@ a:focus {
     ---
     Creates a horizontal container that sets de global max-width
 */
-
 .o-container {
     margin-left: auto;
     margin-right: auto;
-    max-width: 79.5em; /* 79.5 * 16px = 1272 */
+    max-width: 79.5em;
+    /* 79.5 * 16px = 1272 */
     width: 100%;
 }
 
@@ -235,24 +221,24 @@ a:focus {
     ---
     Creates vertical whitespace between adjacent sections inside a row
 */
-
 .o-section {
     position: relative;
 }
 
-.o-section + .o-section {
+.o-section+.o-section {
     padding-top: 24px;
 }
 
 @media (min-width: 768px) {
-    .o-section--lg + .o-section--lg,
-    .o-section--xl + .o-section--xl {
+
+    .o-section--lg+.o-section--lg,
+    .o-section--xl+.o-section--xl {
         padding-top: 48px;
     }
 }
 
 @media (min-width: 992px) {
-    .o-section--xl + .o-section--xl {
+    .o-section--xl+.o-section--xl {
         padding-top: 72px;
     }
 }
@@ -264,7 +250,6 @@ a:focus {
     contains the basic structural elements, but classes should be complemented
     with width utilities
 */
-
 .o-layout {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -277,12 +262,11 @@ a:focus {
 }
 
 /* gutter modifiers, these affect o-layout__item too */
-
 .o-layout--gutter {
     margin: 0 -12px;
 }
 
-.o-layout--gutter > .o-layout__item {
+.o-layout--gutter>.o-layout__item {
     padding: 0 12px;
 }
 
@@ -290,7 +274,7 @@ a:focus {
     margin: 0 -6px;
 }
 
-.o-layout--gutter-sm > .o-layout__item {
+.o-layout--gutter-sm>.o-layout__item {
     padding: 0 6px;
 }
 
@@ -298,7 +282,7 @@ a:focus {
     margin: 0 -24px;
 }
 
-.o-layout--gutter-lg > .o-layout__item {
+.o-layout--gutter-lg>.o-layout__item {
     padding: 0 24px;
 }
 
@@ -306,18 +290,16 @@ a:focus {
     margin: 0 -48px;
 }
 
-.o-layout--gutter-xl > .o-layout__item {
+.o-layout--gutter-xl>.o-layout__item {
     padding: 0 48px;
 }
 
 /* reverse horizontal row modifier */
-
 .o-layout--row-reverse {
     flex-direction: row-reverse;
 }
 
 /* Horizontal alignment modifiers*/
-
 .o-layout--justify-start {
     justify-content: flex-start;
 }
@@ -343,7 +325,6 @@ a:focus {
 }
 
 /* Vertical alignment modifiers */
-
 .o-layout--align-start {
     align-items: flex-start;
 }
@@ -361,7 +342,6 @@ a:focus {
 }
 
 /* Vertical alignment modifiers that only work if there is one than one flex item */
-
 .o-layout--align-content-start {
     align-content: start;
 }
@@ -387,7 +367,6 @@ a:focus {
     ---
     Small reusable object to remove default list styling from lists
 */
-
 .o-list {
     list-style: none;
     padding: 0;
@@ -398,7 +377,6 @@ a:focus {
     ---
     Small button reset object
 */
-
 .o-button-reset {
     border: none;
     margin: 0;
@@ -406,18 +384,14 @@ a:focus {
     width: auto;
     overflow: visible;
     background: transparent;
-
     /* inherit font & color from ancestor */
     color: inherit;
     font: inherit;
-
     /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
     line-height: normal;
-
     /* Corrects font smoothing for webkit */
     -webkit-font-smoothing: inherit;
     -moz-osx-font-smoothing: inherit;
-
     /* Corrects inability to style clickable `input` types in iOS */
     -webkit-appearance: none;
 }
@@ -425,90 +399,63 @@ a:focus {
 /*------------------------------------*\
 #COMPONENTS
 \*------------------------------------*/
-
 /*
     Component: Logo
     ---
     Website main logo
 */
-
 /*
     Component: Card
     ---
     Card with box shadow
 */
-
 /*
     Component: Forms
     ---
     Everything form related here
 */
-
 /*
     Component: Input
     ---
     Class to put on all input="text" like form inputs
 */
+.c-input {}
 
-.c-input {
-
-}
-
-.c-input:focus {
-}
+.c-input:focus {}
 
 /*
     Component: Label
     ---
     Class to put on all form labels
 */
-
-.c-label {
-
-}
+.c-label {}
 
 /* If a input is focused within the form-field class change te color of the label */
-
-.c-form-field:focus-within .c-label {
-
-}
+.c-form-field:focus-within .c-label {}
 
 /*
     Component: Button
     ---
     Class to put on form buttons or links
 */
+.c-button {}
 
-.c-button {
+.c-button:hover {}
 
-}
+.c-button:focus {}
 
-.c-button:hover {
+.c-button:active {}
 
-}
-
-.c-button:focus {
-
-}
-
-.c-button:active {
-
-}
-
-.c-button--block {
-
-}
+.c-button--block {}
 
 /*------------------------------------*\
 #UTILITIES
 \*------------------------------------*/
-
 /*
     Utilities: color
     ---
     Utility classes to put specific colors onto elements
 */
-
 .u-color-neutral-base {
     color: Silver;
 }
@@ -522,7 +469,6 @@ a:focus {
     ---
     Utility classes to put specific margins and paddings onto elements
 */
-
 .u-pt-clear {
     padding-top: 0 !important;
 }
@@ -556,7 +502,6 @@ a:focus {
     ---
     Utility classes to put specific max widths onto elements
 */
-
 .u-max-width-xs {
     max-width: 27em !important;
 }
@@ -577,13 +522,11 @@ a:focus {
     max-width: none !important;
 }
 
-
 /*
     Utilities: align
     ---
     Utility classes align text or components
 */
-
 .u-align-text-center {
     text-align: center;
 }
@@ -596,7 +539,6 @@ a:focus {
     Utilities: text
     Utility classes to create smaller or bigger test
 */
-
 .u-text-sm {
     font-size: 14px;
 }
@@ -607,7 +549,6 @@ a:focus {
     Utility classes to put specific widths onto elements
     Will be mostly used on o-layout__item
 */
-
 .u-width-auto {
     width: auto !important;
 }
@@ -660,33 +601,43 @@ a:focus {
     .u-1-of-2-bp1 {
         width: 50% !important;
     }
+
     .u-1-of-3-bp1 {
         width: 33.3333333333% !important;
     }
+
     .u-2-of-3-bp1 {
         width: 66.6666666667% !important;
     }
+
     .u-1-of-4-bp1 {
         width: 25% !important;
     }
+
     .u-3-of-4-bp1 {
         width: 75% !important;
     }
+
     .u-1-of-5-bp1 {
         width: 20% !important;
     }
+
     .u-2-of-5-bp1 {
         width: 40% !important;
     }
+
     .u-3-of-5-bp1 {
         width: 60% !important;
     }
+
     .u-4-of-5-bp1 {
         width: 80% !important;
     }
+
     .u-1-of-6-bp1 {
         width: 16.6666666667% !important;
     }
+
     .u-5-of-6-bp1 {
         width: 83.3333333333% !important;
     }
@@ -696,33 +647,43 @@ a:focus {
     .u-1-of-2-bp2 {
         width: 50% !important;
     }
+
     .u-1-of-3-bp2 {
         width: 33.3333333333% !important;
     }
+
     .u-2-of-3-bp2 {
         width: 66.6666666667% !important;
     }
+
     .u-1-of-4-bp2 {
         width: 25% !important;
     }
+
     .u-3-of-4-bp2 {
         width: 75% !important;
     }
+
     .u-1-of-5-bp2 {
         width: 20% !important;
     }
+
     .u-2-of-5-bp2 {
         width: 40% !important;
     }
+
     .u-3-of-5-bp2 {
         width: 60% !important;
     }
+
     .u-4-of-5-bp2 {
         width: 80% !important;
     }
+
     .u-1-of-6-bp2 {
         width: 16.6666666667% !important;
     }
+
     .u-5-of-6-bp2 {
         width: 83.3333333333% !important;
     }
@@ -732,33 +693,43 @@ a:focus {
     .u-1-of-2-bp3 {
         width: 50% !important;
     }
+
     .u-1-of-3-bp3 {
         width: 33.3333333333% !important;
     }
+
     .u-2-of-3-bp3 {
         width: 66.6666666667% !important;
     }
+
     .u-1-of-4-bp3 {
         width: 25% !important;
     }
+
     .u-3-of-4-bp3 {
         width: 75% !important;
     }
+
     .u-1-of-5-bp3 {
         width: 20% !important;
     }
+
     .u-2-of-5-bp3 {
         width: 40% !important;
     }
+
     .u-3-of-5-bp3 {
         width: 60% !important;
     }
+
     .u-4-of-5-bp3 {
         width: 80% !important;
     }
+
     .u-1-of-6-bp3 {
         width: 16.6666666667% !important;
     }
+
     .u-5-of-6-bp3 {
         width: 83.3333333333% !important;
     }
@@ -768,33 +739,43 @@ a:focus {
     .u-1-of-2-bp4 {
         width: 50% !important;
     }
+
     .u-1-of-3-bp4 {
         width: 33.3333333333% !important;
     }
+
     .u-2-of-3-bp4 {
         width: 66.6666666667% !important;
     }
+
     .u-1-of-4-bp4 {
         width: 25% !important;
     }
+
     .u-3-of-4-bp4 {
         width: 75% !important;
     }
+
     .u-1-of-5-bp4 {
         width: 20% !important;
     }
+
     .u-2-of-5-bp4 {
         width: 40% !important;
     }
+
     .u-3-of-5-bp4 {
         width: 60% !important;
     }
+
     .u-4-of-5-bp4 {
         width: 80% !important;
     }
+
     .u-1-of-6-bp4 {
         width: 16.6666666667% !important;
     }
+
     .u-5-of-6-bp4 {
         width: 83.3333333333% !important;
     }
@@ -803,7 +784,6 @@ a:focus {
 /*------------------------------------*\
 #MEDIA
 \*------------------------------------*/
-
 /*
     Media Queries
     ---
@@ -811,35 +791,29 @@ a:focus {
     These examples override the primary ('mobile first') styles.
     USE THEM INLINE!
 */
-
 /* Extra small devices (portrait phones, less than 576px)
 No media query since this is the default in mobile first design
 */
-
 /* Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {}
 */
-
 /* Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {}
 */
-
 /* Large devices (landscape tablets, desktops, 992px and up)
 @media (min-width: 992px) {}
 */
-
 /* Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {}
 */
-
 /*
     Print styles.
     ---
     Inlined to avoid the additional HTTP request:
     http://www.phpied.com/delay-loading-your-print-css/
 */
-
 @media print {
+
     *,
     *:before,
     *:after {
@@ -850,16 +824,20 @@ No media query since this is the default in mobile first design
         box-shadow: none !important;
         text-shadow: none !important;
     }
+
     a,
     a:visited {
         text-decoration: underline;
     }
+
     a[href]:after {
-        content: " (" attr(href) ")";
+        content: " ("attr(href) ")";
     }
+
     abbr[title]:after {
-        content: " (" attr(title) ")";
+        content: " ("attr(title) ")";
     }
+
     /*
     * Don't show links that are fragment identifiers,
     * or use the `javascript:` pseudo protocol
@@ -868,14 +846,17 @@ No media query since this is the default in mobile first design
     a[href^="javascript:"]:after {
         content: "";
     }
+
     pre {
         white-space: pre-wrap !important;
     }
+
     pre,
     blockquote {
         border: 1px solid #999;
         page-break-inside: avoid;
     }
+
     /*
     * Printing Tables:
     * http://css-discuss.incutio.com/wiki/Printing_Tables
@@ -883,16 +864,19 @@ No media query since this is the default in mobile first design
     thead {
         display: table-header-group;
     }
+
     tr,
     img {
         page-break-inside: avoid;
     }
+
     p,
     h2,
     h3 {
         orphans: 3;
         widows: 3;
     }
+
     h2,
     h3 {
         page-break-after: avoid;
