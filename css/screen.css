@@ -153,12 +153,12 @@ a {
 
 a:visited,
 a:active {
-    color: HotPink;
+    color: #3385FF;
 }
 
 a:hover,
 a:focus {
-    color: DeepPink;
+    color: #3388FF;
 }
 
 /*------------------------------------*\
