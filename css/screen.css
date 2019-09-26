@@ -4,13 +4,13 @@
 
 @font-face {
   font-family: 'Inter Web';
-  font-weight: 200;
+  font-weight: 400;
   src: url('../fonts/Inter-Regular.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Inter Web';
-  font-weight: 400;
+  font-weight: 600;
   src: url('../fonts/Inter-SemiBold.woff2') format('woff2');
 }
 
@@ -459,9 +459,16 @@ input {
     Class to put on all input="text" like form inputs
 */
 .c-input {
-    -webkit-appearance: none;
--moz-appearance: none;
-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  border: 1px solid #e2e3e7;
+  font-size: 16px;
+  border-radius: 3px;
+  line-height: 24px;
+  font-family: 'Inter Web', Helvetica, arial, sans-serif;
+  padding: 11px 16px;
 }
 
 .c-input:focus {
@@ -479,10 +486,9 @@ appearance: none;
 .c-form-field:focus-within .c-label {
 }
 
-.c-form-field--option{
-    display: flex;
-    align-items:center;
-    
+.c-form-field--option {
+  display: flex;
+  align-items: center;
 }
 
 /*
