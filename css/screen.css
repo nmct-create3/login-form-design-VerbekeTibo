@@ -18,6 +18,9 @@
 #Variables
 \*------------------------------------*/
 :root {
+  --global-page-color: var(--color-neutral-xxxx-dark);
+  --global-page-backgroundColor: var(--color-neutral-xxxx-light);
+
   --global-color-alpha-light: #4f95ff;
   --global-color-alpha: #3385ff;
   --global-color-alpha-dark: #2e77e6;
@@ -47,6 +50,12 @@
   --global-whitespace-xl: calc(var(--global-whitespace-md) * 2); /* = 48px */
   --global-whitespace-xxl: calc(var(--global-whitespace-md) * 3);
 }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --global-page-color: White;
+    --global-page-backgroundColor: var(--color-neutral-xxxx-dark);
+  }
+}
 
 /* CSS variables here */
 /*------------------------------------*\
@@ -61,13 +70,20 @@ html {
   font-size: 16px;
   line-height: 1.5;
   font-family: 'Inter Web', arial, sans-serif;
-  color: #20223a;
+
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f5f6fa;
+
+  color: var(--global-page-color);
+  background-color: var(--global-page-backgroundColor);
 }
 
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: var(--color-neutral-xxxx-dark);
+  }
+}
 *,
 *:before,
 *:after {
