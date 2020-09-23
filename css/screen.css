@@ -52,7 +52,7 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --global-page-color: White;
+    --global-page-color: --global-page-color;
     --global-page-backgroundColor: var(--color-neutral-xxxx-dark);
   }
 }
